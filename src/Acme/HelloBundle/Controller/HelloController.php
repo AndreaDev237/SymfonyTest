@@ -36,7 +36,7 @@ class HelloController extends Controller
     * @Template()
     */
    public function pippoAction()
-   {		
+   {		    
      return array();
    }       
    

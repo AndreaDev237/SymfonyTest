@@ -1,7 +1,7 @@
 {% extends 'AcmeHelloBundle::layout.html.twig' %}
 {% set active = 'lista' %}
  {% block body %}
-<b>Lista Dati Database</b>
+<h1>Lista Dati Database</h1>
 <br></br>
 <table class="table table-bordered">
     <thead>
@@ -30,7 +30,7 @@
     </tbody>
        </table>
 {% for flashMessage in app.session.flashbag.get('notifica') %}
-    <div class="flash-notice">
+    <div class="alert alert-success">
         {{ flashMessage }}
     </div>
 {% endfor %}
