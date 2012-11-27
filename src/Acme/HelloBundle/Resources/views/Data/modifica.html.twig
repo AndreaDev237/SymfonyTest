@@ -1,0 +1,18 @@
+{% extends 'AcmeHelloBundle::layout.html.twig' %}
+{% set active = 'modifica' %}
+ {% block body %}
+<b>Contattaci!</b>
+<form action="{{ path('modifica', {'id': id}) }}" method="post" {{ form_enctype(form) }}>
+    {{ form_errors(form) }}   
+    {{ form_row(form.email) }}
+    {{ form_row(form.nome) }}
+    {{ form_rest(form) }}
+      
+    <input type="submit" />
+</form>
+{% for flashMessage in app.session.flashbag.get('notifica') %}
+    <div class="flash-notice">
+        {{ flashMessage }}
+    </div>
+{% endfor %}
+ {% endblock %}

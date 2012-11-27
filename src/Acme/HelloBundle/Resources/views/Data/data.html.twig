@@ -1,0 +1,40 @@
+{% extends 'AcmeHelloBundle::layout.html.twig' %}
+{% set active = 'lista' %}
+ {% block body %}
+<b>Lista Dati Database</b>
+<br></br>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Email</th>
+            <th>Nome</th>
+            <th>Selezione</th>
+            <th>Telefono</th>
+            <th>Testo</th>
+            <th>Azioni</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for contatto in contatti %}
+        <tr>
+            <td>{{ contatto.id }}</td>
+            <td>{{ contatto.email }}</td>
+            <td>{{ contatto.nome}}</td>
+            <td>{{ contatto.select}}</td>
+            <td>{{ contatto.telefono}}</td>
+            <td>{{ contatto.testo}}</td>
+            <td><a href="{{ path('elimina', {'id': contatto.id}) }}">Elimina</a> || <a href="{{ path('modifica', {'id': contatto.id}) }}">Modifica</a></td>
+        </tr>
+            {% endfor %}
+    </tbody>
+       </table>
+{% for flashMessage in app.session.flashbag.get('notifica') %}
+    <div class="flash-notice">
+        {{ flashMessage }}
+    </div>
+{% endfor %}
+    
+    
+
+ {% endblock %}

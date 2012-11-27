@@ -1,0 +1,26 @@
+acme_task:
+    resource: "@AcmeTaskBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+hello:
+    resource: "@AcmeHelloBundle/Controller"
+    type:     annotation
+    
+menu:
+    pattern: /menu
+    defaults: {_controller: AcmeHelloBundle:Menu:index }
+    
+#page:
+#    pattern: /page/{richiesta}
+#    defaults: {_controller: AcmeHelloBundle:Page:richiesta}
+    
+
+  
+  
+
+
+# Internal routing configuration to handle ESI
+#_internal:
+#    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#    prefix:   /_internal

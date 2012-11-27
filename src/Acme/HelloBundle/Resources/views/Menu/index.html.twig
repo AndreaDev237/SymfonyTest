@@ -1,0 +1,22 @@
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Symfony2 Demo</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">               
+              <li {{ active == 'home' ? 'class="active"' : null }}><a href="{{ path('hello')}}">Home</a></li>
+              <li {{ active == 'page' ? 'class="active"' : null }}><a href="{{ path('page', {'richiesta': 0}) }}">Pagina</a></li>
+              <li {{ active == 'contatti' ? 'class="active"' : null }}><a href="{{ path('contatti')}}">Contatti</a></li>
+              <li {{ active == 'pippo' ? 'class="active"' : null }}><a href="{{ path('home_redirect')}}">Pippo</a></li>
+              <li {{ active == 'pluto' ? 'class="active"' : null }}><a href="{{ path('home_forward')}}">Pluto</a></li>
+               <li {{ active == 'lista' ? 'class="active"' : null }}><a href="{{ path('lista')}}">Lista Dati</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>

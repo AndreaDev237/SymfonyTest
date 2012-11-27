@@ -1,0 +1,13 @@
+{% extends 'AcmeHelloBundle::layout.html.twig' %}
+{% set active = 'page' %}
+ {% block body %}
+Salve Utente, benvenuto nella pagina di prova <b>Symfony 2</b>!
+    <br>
+    {% if  richiesta  == 0 %}
+    <p>Sei arrivato senza premere il bottone <b>[0]</b></p>
+    {% elseif richiesta == 1 %}
+    <p>Sei arrivato qui permendo il bottone <b>[1]</b></p>
+    {% else %}
+    <p>Sei arrivato qui permendo il bottone <b>[2]</b></p>
+    {% endif %}
+ {% endblock %}

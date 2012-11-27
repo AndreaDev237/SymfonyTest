@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+   {% block css %}
+      {% include 'AcmeHelloBundle::css.html.twig' %}
+   {% endblock %}
+   </head>
+   <body>
+   {% render 'AcmeHelloBundle:Menu:index' with {'active': active is not defined ? 'home' : active } %}
+   <div class="container">
+   {% block body %}
+           
+   {% endblock%}
+    </div> 
+   {% block javascript %}
+      {% include 'AcmeHelloBundle::javascript.html.twig' %}
+   {% endblock %}
+
+  </body>
+</html>
