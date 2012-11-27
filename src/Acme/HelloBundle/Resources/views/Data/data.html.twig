@@ -6,7 +6,7 @@
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th>#</th>
+            <th>#ID</th>
             <th>Email</th>
             <th>Nome</th>
             <th>Selezione</th>
@@ -28,7 +28,7 @@
         </tr>
             {% endfor %}
     </tbody>
-       </table>
+</table>
 {% for flashMessage in app.session.flashbag.get('notifica') %}
     <div class="alert alert-success">
         {{ flashMessage }}
