@@ -1,7 +1,7 @@
 {% extends 'AcmeHelloBundle::layout.html.twig' %}
 {% set active = 'modifica' %}
  {% block body %}
-<b>Contattaci!</b>
+<h1>Modifica Scheda</h1>
 <form action="{{ path('modifica', {'id': id}) }}" method="post" {{ form_enctype(form) }}>
     {{ form_errors(form) }}   
     {{ form_row(form.email) }}
